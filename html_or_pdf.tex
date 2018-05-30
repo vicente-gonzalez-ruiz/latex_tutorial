@@ -1,0 +1,11 @@
+\ifx \HCode\Undfef
+\begin{center}
+  \includegraphics[width=1.0\textwidth]{your-figure} % PDF
+\end{center}
+\else
+\HCode{
+  <div style="text-align:center;">
+  <img height="600" src="your-figure.extension" />   % SVG
+  </div>
+}
+\fi

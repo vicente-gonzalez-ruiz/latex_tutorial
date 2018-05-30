@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage{url}     % http://www.ctan.org/tex-archive/macros/latex/contrib/url
+\usepackage{xparse}  % http://www.ctan.org/pkg/xparse
+
+\begin{document}
+
+1. \url{http://www.tug.org}\par
+2. \url{www.tug.org}
+
+%                        Command definition
+%                           <----------->
+\newcommand{\site}[2][http]{\url{#1://#2}}
+%             ^    ^   ^         ^    ^
+%             |    |   |         |    Second argument.
+%             |    |   |         First argument.
+%             |    |   Default value for the fist argument.
+%             |    Number of arguments.
+%             Command name.
+
+3. \site{www.tug.org}\par % Only the second argument has been provided
+4. \site[ftp]{ctan.org}   % Both arguments have been provided
+
+\renewcommand{\site}[2][http]{[\url{#1://#2}]} % Includes "[" ... "]"
+
+5. \site{www.tug.org}\par
+6. \site[ftp]{ctan.org}
+
+% Using \newcommand (or \renewcommand) only the first argument can be optional.
+% To overcome this drawback, use:
+\DeclareDocumentCommand{\site}{O{http://}O{www.ual.es}}{\{\url{#1#2}\}}
+
+7. \site[][www.tug.org]\par     % We specify the second argument
+8. \site[ftp://][ctan.org]\par  % We specify both arguments
+9. \site                        % We don't specify arguments
+
+% Definitions are easier than if you don't touch the arguments.
+\renewcommand{\site}{\url}
+10. \site{http://www.ual.es}
+
+% Delete definition.
+\let\site\relax
+
+\end{document}

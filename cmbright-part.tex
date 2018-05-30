@@ -1,0 +1,23 @@
+\documentclass[12pt]{report}
+
+\usepackage{blindtext}      % http://www.ctan.org/tex-archive/macros/latex/contrib/blindtext
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Selects the "Computer Modern Bright" font for the entire document.
+\usepackage{cmbright}       % http://www.tug.dk/FontCatalogue/cmbright/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\large
+
+{\fontfamily{cmr}\selectfont Font in Computer Modern Bright:}
+\texttt{<- Computer Modern Roman}
+\par\blindtext \texttt{<- Computer Modern Bright}
+
+{\fontfamily{cmr}\selectfont Font in the Computer Modern Times:}
+\texttt{<- Computer Modern Roman, again}
+{\fontfamily{ptm}\selectfont\par\blindtext} \texttt{<- Computer Modern
+  Times}
+
+\end{document}

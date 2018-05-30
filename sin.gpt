@@ -1,0 +1,4 @@
+# sin.gpt (run "gnuplot sin.gpt" to built "sin.pdf")
+set terminal pdfcairo
+set output "sin.pdf"
+plot sin(x)

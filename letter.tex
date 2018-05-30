@@ -1,0 +1,37 @@
+% Simple letter template
+
+%                    <- Class ->
+\documentclass[12pt]{letter}
+%      <- Options ->
+
+\listfiles % For debugging purposes
+
+\signature{Vicente Gonz\'alez Ruiz}
+\address{University of Almer\'ia}
+
+\begin{document}
+
+\begin{letter}{Peter Pan\\Neverland} % Addressee
+
+\opening{Dear Peter:}
+
+To keep flying all night long is a good idea ... bla, bla, bla.
+
+Thank you for your time and consideration.
+
+Looking forward to hearing from you.
+
+\closing{Yours Faithfully,}
+
+\ps
+
+% PostScript
+P.S. Please, remember that ...
+
+% Enclosure
+\encl{A map of Neverland.\\
+The list of known pirates in Neverland.\\
+\vdots}
+
+\end{letter}
+\end{document}

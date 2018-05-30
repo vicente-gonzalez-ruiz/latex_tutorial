@@ -1,0 +1,51 @@
+% Simple article template.
+  
+%              <----- Options ---->  <Class>
+\documentclass[11pt,twoside,a4paper]{article}
+
+%%%%%%%%%%%%%%%%% BEGIN PREAMBLE %%%%%%%%%%%%%%%%%
+
+%           <-Options->  <Package>
+\usepackage[ margin=2cm]{ geometry} % Comment it if you want to use the default margins!
+\usepackage{graphicx} % Provides \includegraphics
+\usepackage{color}
+
+%%%%%%%%%%%%%%%%%% END PREAMBLE %%%%%%%%%%%%%%%%%%
+
+\listfiles % For debugging purposes
+
+\begin{document}
+\title{An Article Template Written in {\color{red}\LaTeX}}
+\author{Vicente Gonz\'alez Ruiz}
+\maketitle
+
+\begin{abstract}
+A synthesis of the paper.
+\end{abstract}
+
+\section{Introduction}
+Motivation, background, questions, objectives, main contributions, etc.
+
+\section{Related work}
+Similar papers: In~\cite{greenwade93} bla, bla, bla.
+
+\section{Proposal}
+Your work: Figure~\ref{fig:sin} shows ... and bla, bla, bla.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{sin}
+  \end{center}
+  \caption{This is a pure sin function.\label{fig:sin}}
+\end{figure}
+
+\section{Results}
+An evaluation of your proposal: Bla, bla, bla.
+
+\section{Conclusions}
+Answers to the Introduction's questions: Bla, bla, bla.
+
+\bibliographystyle{plain}
+\bibliography{example}
+
+\end{document}

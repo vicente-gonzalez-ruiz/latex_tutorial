@@ -1,0 +1,32 @@
+\documentclass{article}
+
+\usepackage{forloop}
+
+\begin{document}
+
+\newcounter{problem_counter}
+\setcounter{problem_counter}{0}
+\newcounter{i}
+\newenvironment{problem}
+{ % Start commands:
+  \refstepcounter{problem_counter}
+  \noindent\textbf{Begin of problem number \arabic{problem_counter}.}
+  \begin{quote}
+}
+{ % End commands:
+  \end{quote}
+  \textbf{End of problem number \arabic{problem_counter}.}  
+}
+
+\begin{problem}
+Solve \forloop{i}{1}{\value{i} < 200}{ bla,}
+
+\end{problem}
+
+Text in between ...
+
+\begin{problem}
+Now solve \forloop{i}{1}{\value{i} < 200}{ bla,}
+\end{problem}
+
+\end{document}

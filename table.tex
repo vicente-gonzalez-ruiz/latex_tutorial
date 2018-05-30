@@ -1,0 +1,27 @@
+\documentclass{article}
+
+\begin{document}
+
+\newcommand{\mytable}{\begin{tabular}{l*{6}{c}r}
+  Team              & P & W & D & L & F  & A & Pts \\
+  \hline
+  Manchester United & 6 & 4 & 0 & 2 & 10 & 5 & 12  \\
+  Celtic            & 6 & 3 & 0 & 3 &  8 & 9 &  9  \\
+  Benfica           & 6 & 2 & 1 & 3 &  7 & 8 &  7  \\
+  FC Copenhagen     & 6 & 2 & 1 & 3 &  5 & 8 &  7  \\
+\end{tabular}}
+
+\mytable
+
+\begin{table}
+  \begin{center}
+    \mytable
+  \end{center}
+  \caption{This is a table inside of the article's ``table'' environment.\label{tab:table_x}}
+\end{table}
+
+Be careful! The format of the table can change with the document class!
+
+Please, see Table~\ref{tab:table_x}.
+
+\end{document}
